@@ -9,10 +9,10 @@ public class AccountService {
 
     private final AccountRepository accountRepository;
 
-    void test(){
+    /*void test(){
         Account account = Account.builder()
                 .number("111-1111-11111")
                 .balance(100000)
                 .build();
-    }
+    }*/
 }

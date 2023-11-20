@@ -7,7 +7,7 @@ import studio.aroundhub.membership.account.dto.AccountDTO;
 @RestController
 public class AccountController {
 
-   private AccountService accountService;
+   //private AccountService accountService;
 
    /*@Autowired
     public AccountController(AccountService accountService) {

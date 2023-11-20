@@ -6,6 +6,4 @@ import java.util.List;
 
 public interface AccountRepository extends JpaRepository<Account, String> {
 
-    //조회
-    List<Account> findByAccountId(String id);
 }
