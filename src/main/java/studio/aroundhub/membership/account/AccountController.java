@@ -9,7 +9,7 @@ public class AccountController {
 
    private AccountService accountService;
 
-   @Autowired
+   /*@Autowired
     public AccountController(AccountService accountService) {
         this.accountService = accountService;
     }
@@ -18,5 +18,5 @@ public class AccountController {
 
        AccountDTO accountDTO = accountService.getAccount(id, password);
        return  accountDTO;
-    }
+    }*/
 }
