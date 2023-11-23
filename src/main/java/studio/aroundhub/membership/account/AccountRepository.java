@@ -1,10 +1,10 @@
 package studio.aroundhub.membership.account;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, String> {
 
-    List<Account> findAccountByCustomerId(long customerId);
+  List<Account> findAccountByCustomerId(long customerId);
 }
