@@ -3,6 +3,9 @@ package studio.aroundhub.membership.account;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
+import studio.aroundhub.membership.account.dto.AccountGetResponse;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -10,10 +13,16 @@ public class AccountService {
 
   private final AccountRepository accountRepository;
 
-  /*void test(){
-      Account account = Account.builder()
-              .number("111-1111-11111")
-              .balance(100000)
-              .build();
-  }*/
+  public List<AccountGetResponse> getAccounts(long customerId){
+    return accountRepository.findAccountByCustomerId(customerId).stream()
+            .map(
+                    account ->
+                            AccountGetResponse.builder()
+                                    .number(account.getNumber())
+                                    .balance(account.getBalance())
+                                    .branchId(account.getBranchId())
+                                    .customerId(account.getCustomerId())
+                                    .build())
+            .toList();
+  }
 }
