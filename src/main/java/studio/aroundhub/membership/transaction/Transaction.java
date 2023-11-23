@@ -12,7 +12,6 @@ public class Transaction extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY) // AutoIncrement 관리
   private long id;
-
   private long balance;
   private String type;
   private long balanceAfterTransaction;
